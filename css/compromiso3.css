@@ -1,0 +1,431 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(245, 246, 250);
+}
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+    /* Ocultamos el checkbox html */
+    .switch input {
+        display: none;
+    }
+
+/* Formateamos la caja del interruptor sobre la cual se deslizará la perilla de control o slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    /* Pintamos la perilla de control o slider usando el selector before */
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+/* Cambiamos el color de fondo cuando el checkbox esta activado */
+input:checked + .slider {
+    background-color: rgb(9, 184, 3);
+}
+
+    /* Deslizamos el slider a la derecha cuando el checkbox esta activado */
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+/* Aplicamos efecto de bordes redondeados en slider y en el fondo del slider */
+.slider.round {
+    border-radius: 34px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+input[type=text], select {
+    width: 120%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button1 {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #04AA6D;
+}
+
+    .button1:hover {
+        background-color: #05774d;
+    }
+
+.button1 {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(9, 184, 3);
+}
+
+    .button1:hover {
+        background-color: rgb(5, 114, 2);
+    }
+
+
+
+
+
+.piedepag {
+    height: 350px;
+    width: 100%;
+    background-color: #242227;
+    top: 148%;
+    position: absolute;
+}
+
+.about {
+    color: #aeb1be;
+    width: 30%;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: absolute;
+    left: 100px;
+    font-size: 17px;
+}
+
+.ptitulo {
+    color: white;
+    font-size: 24px;
+}
+
+.about2 {
+    color: #aeb1be;
+    width: 52%;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: absolute;
+    left: 475px;
+    font-size: 17px;
+    top: -0.01px;
+}
+
+.about3 {
+    color: #aeb1be;
+    width: 65%;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: absolute;
+    left: 775px;
+    font-size: 17px;
+    top: -0.01px;
+}
+
+.A3 {
+    text-decoration: none;
+    font-size: 16px;
+    color: #aeb1be;
+    transition-duration: 0.4s;
+}
+
+    .A3:hover {
+        color: white;
+    }
+
+.A2 {
+    color: #aeb1be;
+    position: relative;
+    text-decoration: none;
+}
+
+.espacio {
+    height: 50px;
+    width: 100%;
+}
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(2, 0, 0);
+    top: 0;
+    background-image: url("../img/logo.png");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+}
+/* LOGO */
+.logo {
+    top: 100;
+    font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    text-align: right;
+    position: relative;
+    right: 15%;
+    width: auto;
+    height: 50px;
+    float: right;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none; /*Quita las vinetas*/
+    float: right;
+}
+
+    .menu li:hover {
+        border-radius: 5px;
+        transition: 0.3s ease;
+        animation-name: my-animation2;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+
+    .menu li {
+        padding: 5px 14px;
+    }
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+}
+
+.dropdown {
+    background-color: rgb(254, 255, 255);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+    .dropdown li + li {
+        margin-top: 10px;
+    }
+
+    .dropdown li {
+        padding: 0.5em 1em;
+        width: 8em;
+        text-align: center;
+    }
+
+        .dropdown li:hover {
+            background-color: #ffffff;
+        }
+
+.services:hover .dropdown {
+    display: block;
+}
+
+
+@keyframes my-animation2 {
+    from {
+        color: #002e5b;
+        text-decoration: underline 3px #b41f01;
+        text-underline-position: under;
+    }
+
+    to {
+        color: rgb(199, 9, 9);
+        text-decoration: underline 3px #ffffff;
+        text-underline-position: under;
+    }
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox] {
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+        .menu li:hover {
+            display: inline-block;
+            background-color: #4c9e9e;
+            transition: 0.3s ease;
+        }
+
+        .menu li + li {
+            margin-top: 12px;
+        }
+
+    input[type=checkbox]:checked ~ .menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+        .dropdown li:hover {
+            background-color: #4c9e9e;
+        }
+}
+
+.boton {
+    position: absolute;
+    left: 500px;
+}
+
+.fondo {
+    width: 100%;
+    background-color: rgb(245, 246, 250);
+    height: 80%;
+}
+
+.banner {
+    height: 300px;
+    width: 100%;
+    background-image: url("https://cdn1.vc4a.com/media/2014/08/19133312/919671_634206996593854_1493231963_o-1280x300.jpg");
+    background-repeat: no-repeat;
+}
+
+    .banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.6);
+        height: 300px;
+        width: 98.9%;
+        top: 15%;
+        left: 6px;
+    }
+
+.titulo {
+    color: #fff;
+    position: relative;
+    font-size: 45px;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+}
+
+
+.file-select {
+    position: relative;
+    display: inline-block;
+}
+
+    .file-select::before {
+        background-color: brown;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        content: 'Seleccionar'; /* testo por defecto */
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .file-select input[type="file"] {
+        opacity: 0;
+        width: 200px;
+        height: 32px;
+        display: inline-block;
+    }
+
+#src-file1::before {
+    content: 'Seleccionar Archivo';
+}
+
+#src-file2::before {
+    content: 'Seleccionar Archivo 2';
+}
